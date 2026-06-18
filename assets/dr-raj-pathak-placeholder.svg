@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Professional doctor portrait placeholder</title>
+  <desc id="desc">A refined portrait placeholder for Dr Raj Pathak.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dcebe3"/>
+      <stop offset="1" stop-color="#fff8ea"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dfece7"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <circle cx="730" cy="180" r="130" fill="#d7a84b" opacity=".28"/>
+  <circle cx="130" cy="850" r="220" fill="#1f766d" opacity=".14"/>
+  <path d="M160 1080c28-248 154-386 290-386s262 138 290 386H160z" fill="url(#coat)"/>
+  <path d="M318 732l132 112 132-112 52 348H266l52-348z" fill="#f8fbf9"/>
+  <path d="M386 780h128l-64 206-64-206z" fill="#1f766d" opacity=".86"/>
+  <circle cx="450" cy="410" r="188" fill="#c89272"/>
+  <path d="M276 386c22-146 118-226 232-206 84 14 142 76 164 174-108-40-223-55-396 32z" fill="#263734"/>
+  <path d="M275 465c-28 0-50 25-50 56s22 56 50 56h26V465h-26zm350 0h-26v112h26c28 0 50-25 50-56s-22-56-50-56z" fill="#c89272"/>
+  <path d="M360 530c43 38 137 38 180 0" fill="none" stroke="#88553f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M365 398c-35 12-70 12-104 0m378 0c-35 12-70 12-104 0" fill="none" stroke="#263734" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="375" cy="468" r="13" fill="#263734"/>
+  <circle cx="525" cy="468" r="13" fill="#263734"/>
+  <path d="M310 766l140 236 140-236" fill="none" stroke="#dfe7e1" stroke-width="32" stroke-linejoin="round"/>
+  <text x="450" y="1018" fill="#10231f" font-family="Arial, sans-serif" font-size="52" font-weight="700" text-anchor="middle">Dr Raj Pathak</text>
+</svg>

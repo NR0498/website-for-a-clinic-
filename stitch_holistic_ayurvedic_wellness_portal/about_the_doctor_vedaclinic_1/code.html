@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Me | VedaClinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e4e2dd",
+                        "outline-variant": "#c3c8c1",
+                        "surface-container": "#f0eee9",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "on-secondary-fixed": "#380d00",
+                        "on-secondary-container": "#773318",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#202f1c",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d0e9d4",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1b3022",
+                        "on-primary-fixed": "#0b2013",
+                        "on-tertiary-container": "#86987e",
+                        "background": "#fbf9f4",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "on-primary": "#ffffff",
+                        "surface": "#fbf9f4",
+                        "on-secondary-fixed-variant": "#763217",
+                        "surface-container-high": "#eae8e3",
+                        "secondary": "#94492c",
+                        "surface-tint": "#4d6453",
+                        "secondary-fixed-dim": "#ffb59b",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f2f1ec",
+                        "primary": "#061b0e",
+                        "surface-bright": "#fbf9f4",
+                        "secondary-container": "#fe9d7a",
+                        "surface-dim": "#dbdad5",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#434843",
+                        "on-tertiary-fixed": "#101f0d",
+                        "outline": "#737973",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#b9ccb0",
+                        "inverse-primary": "#b4cdb8",
+                        "secondary-fixed": "#ffdbcf",
+                        "tertiary-fixed": "#d5e8cb",
+                        "surface-container-low": "#f5f3ee",
+                        "on-background": "#1b1c19",
+                        "error": "#ba1a1a",
+                        "tertiary": "#0c1a09",
+                        "on-tertiary-fixed-variant": "#3b4b36",
+                        "on-surface": "#1b1c19",
+                        "inverse-surface": "#30312e",
+                        "on-primary-container": "#819986"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "container-max": "1200px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "headline-sm": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["\"Source Serif 4\""],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .soft-glow {
+            box-shadow: 0px 4px 20px rgba(27, 48, 34, 0.06);
+        }
+        
+        @keyframes floatUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-float-up {
+            animation: floatUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0; /* Starting state before animation */
+        }
+        
+        .parallax-container {
+            overflow: hidden;
+        }
+        .parallax-img {
+            transform: scale(1.2);
+            transform-origin: center center;
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- Ambient Shader Background -->
+<div class="fixed inset-0 z-[-1] opacity-40 pointer-events-none">
+<!-- STITCH_SHADER_START:ANIMATION_3 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_3" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_3');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a slow, organic liquid motion using sine waves
+    float motion = sin(uv.x * 3.0 + u_time * 0.4) * 0.1;
+    motion += sin(uv.y * 2.0 + u_time * 0.3) * 0.1;
+    
+    // Base nature colors (Forest Green, Sage, Earthy Terracotta)
+    vec3 forestGreen = vec3(0.106, 0.188, 0.133); // #1b3022
+    vec3 sageGreen = vec3(0.482, 0.584, 0.498);  // #7b957f
+    vec3 earthTerracotta = vec3(0.698, 0.345, 0.224); // #b25839
+    vec3 offWhite = vec3(0.984, 0.976, 0.957);   // #fbf9f4
+
+    // Layering the colors with smooth transitions
+    float noise = fract(sin(dot(uv + u_time * 0.05, vec2(12.9898, 78.233))) * 43758.5453);
+    float t1 = smoothstep(0.3, 0.7, uv.y + motion);
+    float t2 = smoothstep(0.4, 0.8, uv.x - motion);
+
+    vec3 color = mix(forestGreen, sageGreen, t1);
+    color = mix(color, earthTerracotta, t2 * 0.3);
+    color = mix(color, offWhite, (1.0 - t1) * 0.2);
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_3 -->
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-[0px_4px_20px_rgba(27,48,34,0.06)] shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter py-sm flex justify-between items-center">
+<div class="font-headline-sm text-headline-sm font-semibold text-primary dark:text-primary-fixed-dim">
+                VedaClinic
+            </div>
+<div class="hidden md:flex space-x-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-lg" href="#">Dashboard</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-low dark:hover:bg-surface-container-high px-3 py-2 rounded-lg" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary font-body-md text-body-md px-3 py-2" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary-container transition-colors soft-glow">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-[100px] pb-xl max-w-container-max mx-auto px-gutter">
+<!-- Hero Section -->
+<section class="py-xl reveal">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-5 space-y-md">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary animate-float-up">
+                        Rooted in Tradition, Elevated by Science.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant animate-float-up" style="animation-delay: 0.2s;">
+                        Hello, I'm Dr. Elara Vance. I blend ancient Ayurvedic principles with modern functional medicine to restore your natural balance.
+                    </p>
+</div>
+<div class="md:col-span-7">
+<div class="relative w-full pb-[75%] rounded-xl overflow-hidden soft-glow">
+<img alt="Dr. Elara Vance in her clinic" class="absolute inset-0 w-full h-full object-cover" data-alt="A serene portrait of a holistic practitioner standing in a light-filled clinic with large windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXX4IYQB_j4St9nOMQR0jJxD9eBFmh3eDG8x7kEW_3Dlc20NMLM2ED6PxM1Lnr9zVDcafrD4lYD3ZFepP7e2McC5iNyfQPJJG4UKNu1O7r2Pab09_qtmtKM2Nico8UjGOY-aXXlZQksjIDviwK2nGZ7TokktlyuCqbT_eCnj3UY5-q8ARsF6tiM0jr3exHuVLqnQSdkuR29LBLylMiPjNFrgfG9Rc2Wq52bXCj4khn6E6MayYIU96dwW53GdhkeEe_L5R8lE33_oY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Credentials Section -->
+<section class="py-xl reveal">
+<h2 class="font-headline-md text-headline-md text-primary mb-lg text-center">Qualifications &amp; Philosophy</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-tertiary/20 soft-glow flex flex-col items-center text-center space-y-sm">
+<span class="material-symbols-outlined text-[48px] text-secondary" style="font-variation-settings: 'FILL' 1;">school</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Education</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Doctor of Naturopathic Medicine (ND)<br/>B.S. Botanical Sciences</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-tertiary/20 soft-glow flex flex-col items-center text-center space-y-sm">
+<span class="material-symbols-outlined text-[48px] text-secondary" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Certifications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Certified Ayurvedic Practitioner<br/>Functional Nutrition Certified</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-tertiary/20 soft-glow flex flex-col items-center text-center space-y-sm">
+<span class="material-symbols-outlined text-[48px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Approach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Treating the whole person, not just symptoms, through personalized, natural protocols.</p>
+</div>
+</div>
+<div class="w-full rounded-xl overflow-hidden soft-glow relative pb-[40%] md:pb-[30%]">
+<img alt="Medical Credentials and Degrees" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG26pnINs7tnyl3eeYtaMp5ueYE4FOQMlJqjJOZiapPiDy13VsETjyknDA3S2iKDgv4YcYdRpD66CFw96jXGyA0tNfcaHsDND19hN08lbfyEN3xOgZgKG0THSgOHMtD-tIBdjTQClGRSUz4HSX8E3H0dkB8i-8JQ-Tl03bgZAoCnIkr2qvgeCzLp2fRxxiBJeOLmebJLgXJLCm1fzjaX76a8c2EzJYca1TZ2sFDE-Gguei4CrHLKpOShZzy02ixE_lFjy2USrbeTE"/>
+</div>
+</section>
+<!-- Environment Gallery (Bento Grid) -->
+<section class="py-xl reveal">
+<h2 class="font-headline-md text-headline-md text-primary mb-lg text-center">Our Healing Space</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-sm auto-rows-[250px]">
+<div class="md:col-span-8 rounded-xl relative soft-glow parallax-container">
+<img alt="Clinic Reception" class="absolute inset-0 w-full h-full object-cover parallax-img" data-speed="0.1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJwRrpxt13H8Mtnhc8apVUHhQBjpDoxRPcWOIWUoGDGN1dT8lzZJPlRgzAXCD58L5fIkSY0ES7E-btOlEE2M9repN4Pz7QF0dbwcmf8XZwhSsEsUHWqP_lo_evj27aMvhk09XFSKbpMkCNtWbbykXHL1KKEBCukZ3lsiYFxrRx_PJeutY3w11fneKfCeK7_5KZDlhGxT0yQi1tiVcL5Z2NeBjNsuX-GyXZubtN4s0ygAF8VBxi4Hjmez-SBKHnMk8cz5SR1ZhzfZc"/>
+</div>
+<div class="md:col-span-4 rounded-xl relative soft-glow parallax-container">
+<img alt="Apothecary" class="absolute inset-0 w-full h-full object-cover parallax-img" data-speed="0.15" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsKIBwJqJWriNx4NemWjW5k664w9V3k09F2cLjnrgvBghlr0J60_5-Jko07JVzme9GOEvi1HHBmOWNeohcOW0CU6FIKhrSQ3YycmrirA8_eDrE6c26PM8-_f1RTfrZTjVYWlRvrJ5FMb_NQt6nboP8dMyVJGhDSy6KPUgvqlHcTyEBuP5y0vXKNeNdVChYuO_N0wax6-FuTmPbfhyCQ1AupRVmS8_Gfk6yUlkeh4KPA9YE1ovJ05EXVF_V-NP5V_lew7TAdTeovcE"/>
+</div>
+<div class="md:col-span-4 rounded-xl relative soft-glow parallax-container">
+<img alt="Treatment Room" class="absolute inset-0 w-full h-full object-cover parallax-img" data-speed="0.12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALgIHT75wwmI1s_IUFztt_I9TK-uUZVvNESW6uJNKpnWgguqLVjXYsgjfIu-RbOnrVgNdVRWpuf9lZ37BXYHR91_Fii-l8KubruVsR9mJqDQJpFhoqFVoS3fynwb7Acx_EwxIHQ7iV40x9JXIitFOGxSPvk2SXhwGKXr2IP-2dOTZC3YsWI64ooK04EBEs_bFCoPdG8gAiqQ5EHEPSPo41xSeUNxD6FUU4NtPfqqBLcB3jPe0PWc3fEMO1CoJyJMVutHWivZVgOQY"/>
+</div>
+<div class="md:col-span-8 rounded-xl relative soft-glow parallax-container">
+<img alt="Meditation Garden" class="absolute inset-0 w-full h-full object-cover parallax-img" data-speed="0.08" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAllgMpSwkDSv1gCOHNVxxN96_-0F6_gXx2kcyBz3xMWOZk5bFoN2saUPntqq_3v9vWlucS_9RHF2oc5zLoMYRArjLEBqTnF9gzsQC7fcJaJQH3uAU1Qeyym8lLK7FXPAA1A88XvPvmnrntTCVcsAiAfnB9xaqw3YZv71MJAiE-fJkPYo2g3FLGyc3CjyhCPIRftuFVL1do8iy8OYmJyQkyA64wUUtdRVmDNb6EWBof-5Xfzjd3b2UQ3EJjBe9aOiTimm-c4pwmd9Y"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-tertiary-container text-on-surface dark:text-on-tertiary-container font-body-md text-body-md w-full mt-xl border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-gutter py-xl flex flex-col md:flex-row justify-between">
+<div class="font-headline-md text-headline-md text-primary dark:text-on-tertiary-container mb-md md:mb-0">
+                VedaClinic
+            </div>
+<div class="flex flex-col md:flex-row md:space-x-lg space-y-sm md:space-y-0">
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">FAQ</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter pb-md text-center text-outline-variant font-label-md text-label-md">
+            © 2024 VedaClinic Holistic Health. Ancient Wisdom, Modern Precision.
+        </div>
+</footer>
+<!-- Sticky Contact Form / WhatsApp FAB (Desktop shows form, Mobile shows FAB) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest border-t border-outline-variant/20 shadow-[0px_-4px_20px_rgba(27,48,34,0.06)] transform translate-y-full md:translate-y-0 transition-transform duration-300 hidden md:block">
+<div class="max-w-container-max mx-auto px-gutter py-sm flex justify-between items-center">
+<div class="font-body-md text-on-surface-variant">Ready to start your healing journey?</div>
+<div class="flex items-center space-x-md">
+<a class="flex items-center text-secondary hover:text-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined mr-xs">chat</span>
+                    WhatsApp Us
+                </a>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary-container transition-colors soft-glow">
+                    Request Consultation
+                </button>
+</div>
+</div>
+</div>
+<!-- Mobile WhatsApp FAB -->
+<a class="md:hidden fixed bottom-md right-md z-50 bg-[#25D366] text-white p-sm rounded-full shadow-[0px_4px_20px_rgba(37,211,102,0.3)] flex items-center justify-center hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined text-[32px]">forum</span>
+</a>
+<script>
+        // Scroll reveal logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+            
+            // Parallax logic
+            const parallaxImages = document.querySelectorAll('.parallax-img');
+            window.addEventListener('scroll', () => {
+                let scrollY = window.scrollY;
+                parallaxImages.forEach(img => {
+                    let speed = img.getAttribute('data-speed') || 0.1;
+                    let yPos = -(scrollY * speed);
+                    // Add slight initial offset so it centers somewhat nicely
+                    img.style.transform = `scale(1.2) translateY(${yPos}px)`;
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Photo gallery for Arogyam Ayurved and Naturopathy Centre." />
+    <title>Gallery | Arogyam Ayurved and Naturopathy Centre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shader-bg" aria-hidden="true">
+      <canvas id="shader-canvas"></canvas>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html">
+        <span class="material-symbols-outlined brand-icon">spa</span>
+        <span>Arogyam Ayurved</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html#services">Services</a>
+        <a href="about-me.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="consultation.html">Book Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-page-hero section-shell reveal">
+        <span class="chip"><span></span>Clinic gallery</span>
+        <h1>Moments from Arogyam Ayurved and Naturopathy Centre.</h1>
+        <p>
+          Add new clinic photos in the `assets/gallery/` folder and duplicate a gallery card below with the new file path.
+        </p>
+      </section>
+
+      <section class="section-shell gallery-feature reveal">
+        <div class="slideshow large" data-slideshow>
+          <figure class="slide active">
+            <img src="assets/gallery-reception.svg" alt="Arogyam clinic reception area" />
+            <figcaption>Reception and welcome area</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="assets/gallery-consultation.svg" alt="Consultation room at Arogyam Ayurved" />
+            <figcaption>Consultation space</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="assets/gallery-patient-care.svg" alt="Patient care at Arogyam clinic" />
+            <figcaption>Patient care</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="assets/gallery-wellness.svg" alt="Wellness therapy setup" />
+            <figcaption>Wellness and therapy</figcaption>
+          </figure>
+          <div class="slide-controls" aria-label="Gallery slideshow controls">
+            <button type="button" data-slide-prev aria-label="Previous gallery photo"><span class="material-symbols-outlined">chevron_left</span></button>
+            <button type="button" data-slide-next aria-label="Next gallery photo"><span class="material-symbols-outlined">chevron_right</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell gallery-grid-section">
+        <div class="gallery-grid">
+          <figure class="gallery-item wide reveal">
+            <img src="assets/gallery-reception.svg" alt="Arogyam clinic reception area" />
+            <figcaption>Reception</figcaption>
+          </figure>
+          <figure class="gallery-item reveal delay-1">
+            <img src="assets/gallery-consultation.svg" alt="Consultation room" />
+            <figcaption>Consultation</figcaption>
+          </figure>
+          <figure class="gallery-item reveal delay-2">
+            <img src="assets/gallery-patient-care.svg" alt="Patient care space" />
+            <figcaption>Patient care</figcaption>
+          </figure>
+          <figure class="gallery-item reveal delay-3">
+            <img src="assets/gallery-wellness.svg" alt="Wellness setup" />
+            <figcaption>Wellness</figcaption>
+          </figure>
+          <figure class="gallery-item wide reveal delay-4">
+            <img src="stitch_holistic_ayurvedic_wellness_portal/a_collection_of_professional_medical_degrees_and_credentials_from_an_ayurvedic/screen.png" alt="Professional credentials" />
+            <figcaption>Credentials</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Arogyam Ayurved and Naturopathy Centre</strong>
+        <span>Clinic gallery</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about-me.html">About</a>
+        <a href="consultation.html">Book</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

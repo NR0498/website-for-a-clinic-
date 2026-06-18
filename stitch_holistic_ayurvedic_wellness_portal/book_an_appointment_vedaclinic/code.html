@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book an Appointment - VedaClinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#f0eee9",
+                    "primary": "#061b0e",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "on-surface-variant": "#434843",
+                    "surface-tint": "#4d6453",
+                    "surface-dim": "#dbdad5",
+                    "on-secondary-fixed-variant": "#763217",
+                    "outline": "#737973",
+                    "background": "#fbf9f4",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1b1c19",
+                    "primary-fixed": "#d0e9d4",
+                    "on-secondary-container": "#773318",
+                    "tertiary": "#0c1a09",
+                    "surface-bright": "#fbf9f4",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2dd",
+                    "tertiary-container": "#202f1c",
+                    "on-surface": "#1b1c19",
+                    "on-primary-container": "#819986",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#b9ccb0",
+                    "secondary-container": "#fe9d7a",
+                    "secondary": "#94492c",
+                    "outline-variant": "#c3c8c1",
+                    "on-tertiary-container": "#86987e",
+                    "on-primary-fixed": "#0b2013",
+                    "inverse-primary": "#b4cdb8",
+                    "inverse-surface": "#30312e",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary-fixed-variant": "#3b4b36",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#101f0d",
+                    "surface-container-high": "#eae8e3",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "surface": "#fbf9f4",
+                    "secondary-fixed-dim": "#ffb59b",
+                    "secondary-fixed": "#ffdbcf",
+                    "primary-container": "#1b3022",
+                    "on-secondary-fixed": "#380d00",
+                    "tertiary-fixed": "#d5e8cb",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "lg": "48px",
+                    "container-max": "1200px",
+                    "xs": "4px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "\"Source Serif 4\""
+                    ],
+                    "display-lg-mobile": [
+                            "\"Source Serif 4\""
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-sm": [
+                            "\"Source Serif 4\""
+                    ],
+                    "display-lg": [
+                            "\"Source Serif 4\""
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .soft-glow {
+            box-shadow: 0px 4px 20px rgba(27, 48, 34, 0.06);
+        }
+        body {
+            background-color: #fbf9f4; /* background */
+            color: #1b1c19; /* on-background */
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md shadow-sm border-b-0">
+<div class="max-w-container-max mx-auto px-gutter py-sm flex justify-between items-center">
+<div class="font-headline-sm text-headline-sm font-semibold text-primary dark:text-primary-fixed-dim">
+                VedaClinic
+            </div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors py-xs" href="#">
+                    Dashboard
+                </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors py-xs" href="#">
+                    Services
+                </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors py-xs" href="#">
+                    About
+                </a>
+</nav>
+<button class="bg-primary text-on-primary hover:bg-surface-tint transition-all px-md py-sm rounded-lg font-label-md text-label-md soft-glow hidden md:block">
+                Book Now
+            </button>
+<!-- Mobile Menu Icon (Placeholder) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[80px] pb-xl flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max px-gutter pt-xl pb-lg text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-sm">Begin Your Healing Journey</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Choose the consultation path that best supports your path to wellness. Our holistic experts are ready to guide you.</p>
+</section>
+<!-- Booking Options Grid -->
+<section class="w-full max-w-container-max px-gutter pb-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Offline Consultation Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/20 soft-glow p-lg flex flex-col transition-transform duration-300 hover:-translate-y-1">
+<div class="mb-md">
+<span class="material-symbols-outlined text-secondary text-4xl mb-sm" style="font-variation-settings: 'FILL' 1;">nature_people</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">In-Person Consultation</h2>
+<p class="text-on-surface-variant">Experience the serene environment of our clinic for a comprehensive holistic assessment.</p>
+</div>
+<div class="flex-grow flex flex-col justify-center space-y-md mb-lg">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-outline mt-1">location_on</span>
+<div>
+<p class="font-semibold text-primary">VedaClinic Sanctuary</p>
+<p class="text-on-surface-variant">123 Tranquil Lane, Wellness District</p>
+<a class="text-secondary hover:text-on-secondary-fixed-variant text-sm flex items-center gap-xs mt-1 transition-colors" href="#">
+                                    View on Map <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary hover:bg-surface-tint transition-all px-md py-sm rounded-lg font-label-md text-label-md flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined">call</span>
+                        Call to Schedule
+                    </button>
+</div>
+<!-- Online Consultation Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/20 soft-glow p-lg flex flex-col transition-transform duration-300 hover:-translate-y-1 relative overflow-hidden">
+<!-- Subtle decorative element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed opacity-20 rounded-bl-full -z-10"></div>
+<div class="mb-md z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-sm" style="font-variation-settings: 'FILL' 1;">video_camera_front</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Remote Video Consultation</h2>
+<p class="text-on-surface-variant">Connect with our practitioners from the comfort of your home for guidance and follow-ups.</p>
+</div>
+<div class="flex-grow flex flex-col justify-center space-y-md mb-lg z-10">
+<div class="bg-surface-container-low p-md rounded-lg">
+<h3 class="font-label-md text-label-md text-primary mb-sm uppercase tracking-wider">Select Practitioner</h3>
+<div class="space-y-sm">
+<label class="flex items-center gap-sm p-sm border border-outline-variant rounded cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="text-secondary focus:ring-secondary" name="practitioner" type="radio"/>
+<div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden flex-shrink-0">
+<img alt="Portrait of a female holistic practitioner with dark hair" class="w-full h-full object-cover" data-alt="A close-up portrait of a serene female holistic practitioner in a light cream clinical coat, looking off-camera with a gentle smile. The background is a bright, modern clinic with ample natural light pouring through large windows, highlighting lush green indoor plants. The mood is nurturing, professional, and calming, fitting a high-end wellness brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRKJYC1CPHlpy1x3_zML7J733qRZEkW4s7lmleF5gusNWTd-waXk2Tr8OkxPTyCuMWVZBhvdRbjy13vtudywr1kHpamrEUb-Pyr0kcu9KjaL9emWdBT-SvX4PlAvXgoxwPn1o1_1hmEURgFhPH_Gz9LkM6wdPknbW0QPHwUP9msEyqT68HNKko4fjFaMOP1_waSxacIdoVa-oBq5dbxBDyglyH3FinbaFtfjdXg7K7mzX6KvxGrD5PZzfcQ7Sm6r1H4-F0FKc5jvA"/>
+</div>
+<div>
+<p class="font-semibold text-primary">Dr. Anaya Sharma</p>
+<p class="text-sm text-on-surface-variant">Ayurvedic Specialist</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="space-y-sm z-10">
+<button class="w-full bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant transition-all px-md py-sm rounded-lg font-label-md text-label-md flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined">calendar_month</span>
+                            Book Video Call
+                        </button>
+<button class="w-full border border-outline text-primary hover:bg-surface-container-low transition-all px-md py-sm rounded-lg font-label-md text-label-md flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined text-[#25D366]">forum</span>
+                            Message on WhatsApp
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Secure Payment Section -->
+<section class="w-full max-w-container-max px-gutter pb-xl text-center flex flex-col items-center">
+<div class="h-[1px] w-24 bg-outline-variant mb-lg opacity-50"></div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Secure Payment Gateway</p>
+<p class="text-sm text-outline mb-md max-w-md">Your consultation booking is secured with industry-standard encryption. We accept major credit cards and digital payments.</p>
+<div class="flex gap-md justify-center items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
+<!-- Placeholder Icons for Payment -->
+<span class="material-symbols-outlined text-3xl" title="Credit Card">credit_card</span>
+<span class="material-symbols-outlined text-3xl" title="Verified Security">verified_user</span>
+<span class="material-symbols-outlined text-3xl" title="Secure Payment">payments</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-low dark:bg-tertiary-container text-on-surface dark:text-on-tertiary-container font-body-md text-body-md border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-gutter py-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
+<div class="font-headline-md text-headline-md text-primary dark:text-on-tertiary-container">
+                VedaClinic
+            </div>
+<div class="text-sm text-on-surface-variant dark:text-on-surface-variant">
+                © 2024 VedaClinic Holistic Health. Ancient Wisdom, Modern Precision.
+            </div>
+<nav class="flex flex-wrap gap-md">
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary hover:opacity-80 transition-opacity" href="#">FAQ</a>
+</nav>
+</div>
+</footer>
+</body></html>
