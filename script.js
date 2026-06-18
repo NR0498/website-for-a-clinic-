@@ -4,8 +4,9 @@ const nav = document.querySelector("[data-nav]");
 
 const clinicConfig = {
   email: "clinic@example.com",
-  phone: "+910000000000",
-  instagram: "https://www.instagram.com/",
+  phone: "+918126766252",
+  instagram: "https://www.instagram.com/dr.raj.pathak?utm_source=qr&igsh=OXRncHpwZHExMWoy",
+  youtube: "https://youtube.com/@drrajpathak?si=siOhHr5ldr-YrhCD",
   facebook: "https://www.facebook.com/",
   googleReviewsEndpoint: "/api/google-reviews",
   appointmentEndpoint: "https://formsubmit.co/ajax/clinic@example.com",
@@ -371,7 +372,7 @@ if (bookingForm && formStatus) {
       "VERSION:2.0",
       "BEGIN:VEVENT",
       `UID:${appointment.id}@drrajpathak.local`,
-      `SUMMARY:${appointment.service} with Dr Raj Pathak`,
+      `SUMMARY:${appointment.service} with Dr.Raj Pathak`,
       `DESCRIPTION:${summary.replace(/\n/g, "\\n")}`,
       appointment.date ? `DTSTART;VALUE=DATE:${appointment.date.replace(/-/g, "")}` : "",
       "END:VEVENT",

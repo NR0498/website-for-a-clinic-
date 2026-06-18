@@ -1,6 +1,6 @@
-# Arogyam Ayurved and Naturopathy Centre Website
+# Dr.Raj Pathak Website
 
-Static website for Arogyam Ayurved and Naturopathy Centre / Dr Raj Pathak MD(AM), including:
+Static website for Dr.Raj Pathak (MD) AM and Arogyam Ayurved and Naturopathy Centre, including:
 
 - Landing page with hero portrait area
 - Homepage about preview plus full `about-me.html` page
@@ -34,13 +34,14 @@ assets/dr-raj-pathak_placeholder.png
 Update these placeholders before publishing:
 
 - In `index.html`: phone link, email link, Instagram URL, and Facebook URL in the contact section
-- In `script.js`: `clinicConfig.email`, `clinicConfig.phone`, `clinicConfig.instagram`, `clinicConfig.facebook`, `clinicConfig.appointmentEndpoint`, and `clinicConfig.contactEndpoint`
+- In `script.js`: `clinicConfig.email`, `clinicConfig.phone`, `clinicConfig.instagram`, `clinicConfig.youtube`, `clinicConfig.facebook`, `clinicConfig.appointmentEndpoint`, and `clinicConfig.contactEndpoint`
 
 Current placeholders are:
 
-- Phone: `+91 00000 00000`
+- Phone: `+91 81267 66252`
 - Email: `clinic@example.com`
-- Instagram: `https://www.instagram.com/`
+- Instagram: `https://www.instagram.com/dr.raj.pathak?utm_source=qr&igsh=OXRncHpwZHExMWoy`
+- YouTube: `https://youtube.com/@drrajpathak?si=siOhHr5ldr-YrhCD`
 - Facebook: `https://www.facebook.com/`
 
 ## Gallery photos

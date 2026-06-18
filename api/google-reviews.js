@@ -1,6 +1,6 @@
 const GOOGLE_PLACES_DETAILS_URL = "https://places.googleapis.com/v1/places";
 const DEFAULT_GOOGLE_PLACE_ID = "ChIJlypth8n9CjkRvuFcoXk0sKw";
-const GOOGLE_PLACES_API_KEY="AIzaSyDhLJiK_Q0frtgNVocegXVPQJRNhimAjqU";
+const GOOGLE_PLACES_API_KEY="GOOGLE_PLACES_API_KEY";
 module.exports = async function handler(request, response) {
   if (request.method !== "GET") {
     response.setHeader("Allow", "GET");

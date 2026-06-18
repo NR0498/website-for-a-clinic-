@@ -862,6 +862,11 @@ h3 {
   stroke-width: 1.8;
 }
 
+.social-icon-fill {
+  fill: var(--secondary);
+  stroke: none;
+}
+
 .about-page-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
